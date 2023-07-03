@@ -150,6 +150,11 @@ aside {
     right: 0;
     margin: 20px;
     cursor: pointer;
+    opacity: 0;
+}
+
+aside.show {
+    opacity: 1;
 }
 
 aside:hover {
