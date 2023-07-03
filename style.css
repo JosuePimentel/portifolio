@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif, normal;
+    color: #fff;
+    transition: .5s ease-in-out ;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #1a1a1a;
+    position: relative;
+}
+
+header {
+    width: 100%;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: absolute;
+    z-index: 1000;
+}
+
+header > div {
+    margin: 0 50px;
+    font-size: 18px;
+}
+
+header > div.menu > ul {
+    display: flex;
+    justify-content: space-around;
+    min-width: 400px;
+    align-items: center;
+}
+
+header > div.menu > ul a {
+    padding: 5px 10px;
+    font-weight: 500;
+    /* background-color: aliceblue; */
+    border-radius: 5px;
+}
+
+header > div > a:hover {
+    color: #939;
+}
+
+header > div.menu > ul a:hover {
+    font-weight: 600;
+    color: #939;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+main {
+    min-height: 100vh;
+}
+
+main > section {
+    min-height: 100vh;
+}
+
+main > section.main {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+main > section.main > pre {
+    /* flex-grow: 1; */
+    margin-top: 100px;
+    max-width: 400px;
+    min-height: 70px;
+    word-wrap: break-word;
+    text-align: center;
+    font-size: 25px;
+}
+
+main > section.main > pre::after {
+    content: '|';
+    opacity: 1;
+    margin-left: 5px;
+    display: inline-block;
+    animation: blink .7s infinite;
+  }
+
+@keyframes blink {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+}
+
+main > section.main > span {
+    position: relative;
+    /* top: 70%; */
+    /* left: 50%; */
+    width: 20px;
+    height: 40px;
+    border: 1px solid #fff;
+    border-radius: 10px;
+}
+
+main > section.main > span::after {
+    content: '';
+    display: block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-6px, 0);
+    /* animation-name: scrolar; */
+    animation:scrolar 3s ease 1s infinite ;
+}
+
+@keyframes scrolar {
+    0% {top: 20%;}
+    50% {top: 50%;}
+    100% {top: 20%;}
+}
+
+aside {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #111;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 20px;
+    cursor: pointer;
+}
+
+aside:hover {
+    box-shadow: 0 0 5px #232323;
+}
