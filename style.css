@@ -6,7 +6,8 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif, normal;
     color: #fff;
-    transition: .5s ease-in-out ;
+    /* transition: all 1s ease; */
+    scroll-behavior: smooth;
 }
 
 body {
@@ -43,15 +44,29 @@ header > div.menu > ul a {
     font-weight: 500;
     /* background-color: aliceblue; */
     border-radius: 5px;
+    position: relative;
+    transition: ;
 }
 
-header > div > a:hover {
-    color: #939;
+header > div.menu > ul a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.5px;
+    border-radius: 5px;
+    width: 0;
+    background-color: #fff;
+    transition: all .5s ease;
+}
+
+header > div.menu > ul a:hover::after {
+    width: 100%;
 }
 
 header > div.menu > ul a:hover {
     font-weight: 600;
-    color: #939;
 }
 
 a {
@@ -94,7 +109,7 @@ main > section.main > pre::after {
     opacity: 1;
     margin-left: 5px;
     display: inline-block;
-    animation: blink .7s infinite;
+    animation: blink .7s 20;
   }
 
 @keyframes blink {
@@ -145,7 +160,7 @@ aside {
     justify-content: center;
     align-items: center;
     border: 1px solid #111;
-    position: absolute;
+    position: fixed;
     bottom: 0;
     right: 0;
     margin: 20px;
