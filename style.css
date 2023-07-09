@@ -79,11 +79,10 @@ main {
 
 main > section {
     min-height: 100vh;
+    position: relative;
 }
 
 main > section.main {
-    position: relative;
-
     display: flex;
     flex-direction: column;
     justify-content: space-around;

@@ -12,12 +12,10 @@ typeWriter(document.querySelector("section.main > pre"))
 // Up arrow
 const upAside = document.querySelector('aside')
 setInterval(() => {
-    if(window.pageYOffset >= 60) upAside.classList.add('show')
+    if (window.pageYOffset >= 60) upAside.classList.add('show')
     else upAside.classList.remove('show')
 }, 200)
-upAside.addEventListener('click', () => {
-    window.scroll(0,0)
-})
+upAside.addEventListener('click', () => scrolar(0))
 
 
 //Scroll smooth
@@ -28,9 +26,13 @@ sect.forEach(ele => {
         const attr = ele.getAttribute('href')
         
         const to = document.querySelector(attr).offsetTop
-        scroll({
-            top: to,
-            behavior: "smooth"
-        })
+        scrolar(to)
     })
 })
+
+const scrolar = to => {
+    window.scroll({
+        top: to,
+        behavior: "smooth"
+    })
+}
