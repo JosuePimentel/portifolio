@@ -6,6 +6,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif, normal;
     color: #fff;
+    transition: all 2s ease;
 }
 
 body {
@@ -42,6 +43,7 @@ header > div.menu > ul a {
     font-weight: 500;
     border-radius: 5px;
     position: relative;
+    transition: none;
 }
 
 header > div.menu > ul a::after {
@@ -220,9 +222,9 @@ main > section#about > div span {
 }
 
 main > section#about > div > span#id_1 {
-    width: 200px;
+    width: 300px;
     height: 5px;
-    right: -200px;
+    right: -300px;
     top: 100px;
 }
 
@@ -250,6 +252,8 @@ main > section#about > div > span#id_1 > span#bottom > a {
     padding: 0 10px;
     z-index: 1;
     cursor: pointer;
+    transform: translate(10px, 30px);
+    opacity: 0;
 }
 
 main > section#about > div > span#id_1 > span#bottom > a::after {
@@ -267,12 +271,14 @@ main > section#about > div > span#id_1 > span#bottom > a::after {
 main > section#about > div > span#id_1 > span#top > p {
     position: absolute;
     /* height: 30px; */
-    padding: 0 10px;
+    padding: 0 10px 10px;
     width: 250px;
-    top: -145px;
+    top: -155px;
     right: -125px;
     text-align: justify;
     font-size: 15px;
+    transform: translate(-30px, 0);
+    opacity: 0;
 }
 
 main > section#about > div > span#id_1 > span#top > p::after {
@@ -296,8 +302,56 @@ main > section#about > div > span#id_2 {
 
 main > section#about > div > span#id_2 > span#top {
     height: 50px;
-    left: 25%;
+    left: 10%;
     top: -50px;
+}
+
+main > section#about > div > span#id_2 > span#top > div {
+    width: 400px;
+    left: -200px;
+    bottom: 50px;
+    position: absolute;
+    font-size: 12px;
+    padding: 0 15px 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    transform: translate(0, 30px);
+    opacity: 0;
+}
+
+main > section#about > div > span#id_2 > span#top > div::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+main > section#about > div > span#id_2 > span#top > div > h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+main > section#about > div > span#id_2 > span#top > div > ul {
+    display: flex;
+    gap: 20px;
+    /* align-items: center; */
+}
+
+main > section#about > div > span#id_2 > span#top > div > ul > li {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+main > section#about > div > span#id_2 > span#top > div > ul > li > p {
+    text-align: justify;
 }
 
 main > section#about > div > span#id_2 > span#bottom {
@@ -317,6 +371,8 @@ main > section#about > div > span#id_2 > span#bottom > div {
     /* align-items: center; */
     justify-content: center;
     gap: 10px;
+    transform: translate(-30px, 20px);
+    opacity: 0;
 }
 
 main > section#about > div > span#id_2 > span#bottom > div::after {
@@ -339,4 +395,9 @@ main > section#about > div > span#id_2 > span#bottom > div > div {
 
 main > section#about > div > span#id_2 > span#bottom > div > div > ul > li {
     list-style-type: circle;
+}
+
+main > section#about > div > span> span > .show {
+    transform: translateY(0) !important;
+    opacity: 1 !important;
 }
