@@ -203,6 +203,7 @@ main > section#about > div > img {
     border: 2px solid #fff;
     cursor: pointer;
     transition: all .5s ease;
+    z-index: 1000;
 }
 
 main > section#about > div > img:hover {
@@ -214,6 +215,7 @@ main > section#about > div span {
     display: block;
     background-color: #fff;
     position: absolute;
+    width: 5px;
     /* z-index: -1; */
 }
 
@@ -224,9 +226,9 @@ main > section#about > div > span#id_1 {
     top: 100px;
 }
 
-main > section#about > div > span#id_1 > span {
+/* main > section#about > div > span#id_1 > span {
     width: 5px;
-}
+} */
 
 main > section#about > div > span#id_1 > span#top {
     height: 100px;
@@ -283,4 +285,58 @@ main > section#about > div > span#id_1 > span#top > p::after {
     bottom: -10px;
     background-color: #fff;
     border-radius: 1px;
+}
+
+main > section#about > div > span#id_2 {
+    width: 250px;
+    height: 5px;
+    left: -250px;
+    top: 50%;
+}
+
+main > section#about > div > span#id_2 > span#top {
+    height: 50px;
+    left: 25%;
+    top: -50px;
+}
+
+main > section#about > div > span#id_2 > span#bottom {
+    height: 50px;
+    left: 0;
+    bottom: -50px;
+}
+
+main > section#about > div > span#id_2 > span#bottom > div {
+    width: max-content;
+    padding: 20px 25px;
+    position: absolute;
+    right: -172px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    gap: 10px;
+}
+
+main > section#about > div > span#id_2 > span#bottom > div::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 1px;
+    background-color: #fff;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+main > section#about > div > span#id_2 > span#bottom > div > div {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+main > section#about > div > span#id_2 > span#bottom > div > div > ul > li {
+    list-style-type: circle;
 }
